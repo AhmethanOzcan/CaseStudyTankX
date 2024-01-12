@@ -29,8 +29,8 @@ app = tornado.web.Application([
 ])
 
 def main():
-    app.listen(8888)
-    print("Starting Tornado Web server on port 8888")
+    app.listen(8080)
+    print("Starting Tornado Web server on port 8080")
     tornado.ioloop.IOLoop.current().start()
 
 # Running the server

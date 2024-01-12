@@ -20,13 +20,13 @@ n = 10000
 
 async def connect():
     global messages_received
-    start_time = time.time()
 
     # Establish WebSocket connection
-    conn = await tornado.websocket.websocket_connect("ws://localhost:8888/websocket")
+    conn = await tornado.websocket.websocket_connect("ws://localhost:8080/websocket")
 
     # Give start signal
     await conn.write_message("Start!")
+    start_time = time.time()
 
     while True:
         receive_time = time.time()
